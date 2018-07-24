@@ -1,0 +1,12 @@
+Source: qhttping
+Maintainer: Folkert van Heusden <folkert@vanheusden.com>
+Section: text
+Priority: optional
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), qtbase5-dev, qtbase5-dev-tools, qt5-qmake, libcurl4-openssl-dev
+Homepage: http://www.vanheusden.com/httping/
+
+Package: qhttping
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5gui5, libqt5widgets5, libqt5core5a
+Description: A HTTP latency measurer.

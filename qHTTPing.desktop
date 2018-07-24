@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=qHTTPing
+Exec=/usr/bin/qHTTPing
+Comment=qHTTPing
+Icon=/usr/share/pixmaps/qHTTPing.png
+StartupNotify=false
+Encoding=UTF-8
+Categories=System
