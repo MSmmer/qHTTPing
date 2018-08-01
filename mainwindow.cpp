@@ -76,6 +76,8 @@ void MainWindow::on_GO_clicked()
 
         curl_easy_setopt(curl, CURLOPT_HTTP_VERSION, ui->httpVersion->checkState() == Qt::Checked ? CURL_HTTP_VERSION_2_0 : (ui->pipelining->checkState() == Qt::Checked ? CURL_HTTP_VERSION_1_1 : CURL_HTTP_VERSION_1_0));
 
+        curl_easy_setopt(curl, CURLOPT_IPRESOLVE, ui->ipv6resolve->checkState() == Qt::Checked ? CURL_IPRESOLVE_V6 : CURL_IPRESOLVE_V4);
+
         curl_easy_setopt(curl, CURLOPT_TIMEOUT_MS, long(ui->timeout->text().toDouble() * 1000.0));
 
         curl_easy_setopt(curl, CURLOPT_USERAGENT, "qHTTPing");
